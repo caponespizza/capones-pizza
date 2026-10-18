@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capones Pizza</title>
+<style>
+body{margin:0;background:#111;color:white;font-family:Arial,sans-serif}
+header{background:#080808;text-align:center;padding:35px 15px;border-bottom:2px solid #d9ad63}
+h1{font-size:38px;margin:0;color:white}
+h1 span{color:#e23b36}
+header p{color:#e9c78a;font-style:italic}
+main{padding:20px;max-width:650px;margin:auto}
+h2{color:#e9c78a}
+.producto{border:1px solid #aa854b;border-radius:12px;padding:18px;margin:15px 0}
+.precio{color:#e9c78a;font-size:24px;font-weight:bold}
+button{background:#d9ad63;color:#111;border:0;border-radius:8px;padding:13px;font-weight:bold;width:100%}
+</style>
+</head>
+<body>
+<header>
+<h1>CAPONES <span>PIZZA</span></h1>
+<p>Más que pizza, buenos momentos</p>
+</header>
+<main>
+<h2>Nuestras pizzas</h2>
+<div class="producto">
+<h3>Margarita</h3>
+<p>Salsa de tomate, queso mozzarella y albahaca fresca.</p>
+<p class="precio">$4.500</p>
+<p>Pizza chica</p>
+<button onclick="agregar()">Agregar al carrito</button>
+</div>
+<h2>Carrito: <span id="cantidad">0</span> productos</h2>
+</main>
+<script>
+let cantidad=0;
+function agregar(){
+cantidad++;
+document.getElementById('cantidad').textContent=cantidad;
+}
+</script>
+</body>
+</html>
